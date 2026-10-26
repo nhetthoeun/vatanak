@@ -36,9 +36,23 @@ function loadConfig() {
   };
 }
 
-// Helper: រក្សាទុក Config
+// Helper: រក្សាទុក Config និង Auto Push ទៅកាន់ GitHub
 function saveConfig(newConfig) {
   fs.writeFileSync(CONFIG_PATH, JSON.stringify(newConfig, null, 2), 'utf8');
+
+  // Auto push to GitHub in background
+  try {
+    const { exec } = require('child_process');
+    exec('git add config.json && git commit -m "chore: auto-update config via Admin UI" && git push origin main', { cwd: __dirname }, (err, stdout, stderr) => {
+      if (err) {
+        console.error('⚠️ Auto-push to GitHub error:', err.message);
+      } else {
+        console.log('🚀 បាន Auto-Push config.json ទៅកាន់ GitHub ដោយជោគជ័យ!');
+      }
+    });
+  } catch (e) {
+    console.error('Auto-push trigger failed:', e.message);
+  }
 }
 
 let botConfig = loadConfig();

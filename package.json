@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
-    "push": "git add . && git commit -m \"chore: update project\" && git push origin main",
+    "push": "git add . & (git commit -m \"chore: update project\" || echo No changes to commit) & git push origin main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

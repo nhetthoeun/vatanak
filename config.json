@@ -1,0 +1,22 @@
+{
+  "welcomeMessage": "👋 <b>សួស្តី {name}!</b>\n\n🎉 <b>សូមស្វាគមន៍មកកាន់ Telegram Bot របស់យើងខ្ញុំ!</b>\nWelcome to <b>@{bot_name}</b> 🤖\n\n📋 <b>ព័ត៌មានគណនីរបស់អ្នក (Your Profile):</b>\n• 🆔 <b>ID:</b> <code>{id}</code>\n• 👤 <b>ឈ្មោះ:</b> {name}\n• 🏷️ <b>Username:</b> {username}\n\n✨ <i>សូមចុចប៊ូតុងខាងក្រោម ឬផ្ញើសារមកខ្ញុំបានគ្រប់ពេល!</i>",
+  "buttons": [
+    {
+      "text": "ℹ️ អំពី Bot",
+      "type": "callback",
+      "value": "btn_about"
+    },
+    {
+      "text": "❓ ជំនួយ",
+      "type": "callback",
+      "value": "btn_help"
+    },
+    {
+      "text": "🌐 បើក Telegram Bot",
+      "type": "url",
+      "value": "https://t.me/vatanak20168_bot"
+    }
+  ],
+  "adminPasscode": "admin123",
+  "updatedAt": "2026-10-26T00:57:08.352Z"
+}

@@ -24,10 +24,6 @@
       --danger: #ef4444;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --tg-blue: #2481cc;
-      --tg-bubble-bot: #182533;
-      --tg-bubble-user: #2b5278;
-      --tg-bg: #0e1621;
     }
 
     * {
@@ -179,7 +175,7 @@
 
     /* Container */
     .app-container {
-      max-width: 1380px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 24px 20px 48px;
       width: 100%;
@@ -240,18 +236,10 @@
       margin-top: 2px;
     }
 
-    /* Main Grid */
-    .workspace-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    @media (max-width: 980px) {
-      .workspace-grid {
-        grid-template-columns: 1fr;
-      }
+    /* Main Workspace */
+    .workspace-layout {
+      max-width: 1050px;
+      margin: 0 auto;
     }
 
     /* Card Shell */
@@ -260,7 +248,7 @@
       backdrop-filter: blur(16px);
       border: 1px solid var(--border-color);
       border-radius: 18px;
-      padding: 24px;
+      padding: 28px;
       box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.45);
     }
 
@@ -268,13 +256,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
-      padding-bottom: 14px;
+      margin-bottom: 22px;
+      padding-bottom: 16px;
       border-bottom: 1px solid var(--border-color);
     }
 
     .panel-title {
-      font-size: 1.05rem;
+      font-size: 1.15rem;
       font-weight: 700;
       display: flex;
       align-items: center;
@@ -282,9 +270,10 @@
     }
 
     .panel-subtitle {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       font-weight: 400;
+      margin-top: 4px;
     }
 
     /* Templates / Presets */
@@ -314,9 +303,9 @@
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid var(--border-color);
       color: var(--text-main);
-      padding: 6px 12px;
+      padding: 8px 14px;
       border-radius: 8px;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       cursor: pointer;
       font-family: inherit;
       transition: all 0.2s ease;
@@ -338,7 +327,7 @@
       gap: 6px;
       margin-bottom: 12px;
       background: rgba(0, 0, 0, 0.25);
-      padding: 8px 10px;
+      padding: 10px 12px;
       border-radius: 10px;
       border: 1px dashed var(--border-color);
     }
@@ -347,10 +336,10 @@
       background: rgba(99, 102, 241, 0.18);
       border: 1px solid rgba(99, 102, 241, 0.35);
       color: #c7d2fe;
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: 6px;
       font-family: monospace;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       cursor: pointer;
       transition: all 0.15s ease;
     }
@@ -377,20 +366,20 @@
     /* Editor Textarea */
     .textarea-wrapper {
       position: relative;
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
     .welcome-textarea {
       width: 100%;
-      height: 250px;
+      height: 280px;
       background: rgba(10, 14, 23, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 12px;
-      padding: 14px 16px;
+      padding: 16px 18px;
       color: #f1f5f9;
       font-family: 'Plus Jakarta Sans', 'Kantumruy Pro', monospace;
-      font-size: 0.92rem;
-      line-height: 1.6;
+      font-size: 0.95rem;
+      line-height: 1.65;
       resize: vertical;
       outline: none;
       transition: border-color 0.2s, box-shadow 0.2s;
@@ -405,18 +394,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 6px;
-      font-size: 0.75rem;
+      margin-top: 8px;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
     /* Buttons Configurator */
     .buttons-manager {
-      margin-bottom: 22px;
+      margin-bottom: 24px;
       background: rgba(0, 0, 0, 0.2);
       border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 14px;
+      padding: 16px;
     }
 
     .buttons-list {
@@ -428,16 +417,16 @@
 
     .btn-item-row {
       display: grid;
-      grid-template-columns: 140px 100px 1fr 36px;
-      gap: 8px;
+      grid-template-columns: 180px 120px 1fr 38px;
+      gap: 10px;
       align-items: center;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border-color);
-      padding: 8px 10px;
+      padding: 10px 12px;
       border-radius: 8px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .btn-item-row {
         grid-template-columns: 1fr 1fr;
       }
@@ -448,8 +437,8 @@
       border: 1px solid var(--border-color);
       color: #fff;
       font-family: inherit;
-      font-size: 0.82rem;
-      padding: 6px 10px;
+      font-size: 0.85rem;
+      padding: 8px 12px;
       border-radius: 6px;
       outline: none;
       width: 100%;
@@ -467,14 +456,14 @@
       background: rgba(239, 68, 68, 0.15);
       border: 1px solid rgba(239, 68, 68, 0.3);
       color: #f87171;
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
       border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 15px;
       transition: all 0.2s;
     }
 
@@ -484,14 +473,14 @@
     }
 
     .btn-add-action {
-      margin-top: 10px;
+      margin-top: 12px;
       background: transparent;
       border: 1px dashed var(--border-color);
       color: var(--text-muted);
       width: 100%;
-      padding: 8px;
+      padding: 10px;
       border-radius: 8px;
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       cursor: pointer;
       transition: all 0.2s;
       display: flex;
@@ -504,6 +493,21 @@
       border-color: var(--primary);
       color: var(--primary);
       background: rgba(56, 189, 248, 0.05);
+    }
+
+    /* Test Send Box */
+    .test-send-card {
+      margin-bottom: 24px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .test-send-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
     }
 
     /* Actions Bottom Bar */
@@ -519,7 +523,7 @@
       background: linear-gradient(135deg, #0284c7, #38bdf8);
       color: #041226;
       border: none;
-      padding: 12px 24px;
+      padding: 12px 28px;
       border-radius: 10px;
       font-size: 0.95rem;
       font-weight: 700;
@@ -541,7 +545,7 @@
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid var(--border-color);
       color: var(--text-muted);
-      padding: 10px 18px;
+      padding: 11px 20px;
       border-radius: 10px;
       font-size: 0.88rem;
       font-weight: 600;
@@ -555,198 +559,17 @@
       color: #fff;
     }
 
-    /* Phone Simulator */
-    .simulator-panel {
-      position: sticky;
-      top: 96px;
-    }
-
-    .phone-frame {
-      background: #17212b;
-      border: 2px solid rgba(255, 255, 255, 0.12);
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.65);
-    }
-
-    .phone-top-bar {
-      background: #242f3d;
-      padding: 12px 18px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    }
-
-    .phone-bot-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #0284c7, #38bdf8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-
-    .phone-bot-title {
-      flex: 1;
-    }
-
-    .phone-bot-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .phone-bot-sub {
-      font-size: 0.75rem;
-      color: #7f91a4;
-    }
-
-    .phone-chat-area {
-      background-color: var(--tg-bg);
-      background-image: 
-        radial-gradient(#1e2c3a 1px, transparent 1px);
-      background-size: 20px 20px;
-      padding: 20px 16px;
-      min-height: 440px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .tg-date-badge {
-      align-self: center;
-      background: rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(4px);
-      color: #8da0b6;
-      font-size: 0.72rem;
-      padding: 4px 12px;
-      border-radius: 12px;
-    }
-
-    .user-bubble {
-      align-self: flex-end;
-      background: var(--tg-bubble-user);
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 14px 14px 4px 14px;
-      max-width: 80%;
-      font-size: 0.88rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      display: flex;
-      align-items: flex-end;
-      gap: 8px;
-    }
-
-    .bubble-meta {
-      font-size: 0.68rem;
-      color: rgba(255, 255, 255, 0.6);
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-    }
-
-    .bot-bubble-wrapper {
-      align-self: flex-start;
-      max-width: 90%;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .bot-bubble {
-      background: var(--tg-bubble-bot);
-      color: #f5f5f5;
-      padding: 12px 14px;
-      border-radius: 14px 14px 14px 4px;
-      font-size: 0.88rem;
-      line-height: 1.55;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-      word-break: break-word;
-    }
-
-    .bot-bubble b, .bot-bubble strong {
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    .bot-bubble code {
-      background: rgba(0, 0, 0, 0.35);
-      color: #38bdf8;
-      padding: 2px 5px;
-      border-radius: 4px;
-      font-family: monospace;
-      font-size: 0.82rem;
-    }
-
-    .bot-bubble i, .bot-bubble em {
-      color: #cbd5e1;
-      font-style: italic;
-    }
-
-    .bot-bubble a {
-      color: #64b5f6;
-      text-decoration: underline;
-    }
-
-    .sim-buttons-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 6px;
-    }
-
-    .sim-btn {
-      background: rgba(36, 129, 204, 0.25);
-      border: 1px solid rgba(36, 129, 204, 0.4);
-      color: #64b5f6;
-      padding: 8px 10px;
-      border-radius: 8px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      user-select: none;
-    }
-
-    .sim-btn:hover {
-      background: rgba(36, 129, 204, 0.4);
-      color: #fff;
-    }
-
-    .sim-btn.full-width {
-      grid-column: span 2;
-    }
-
-    /* Test Send Box */
-    .test-send-card {
-      margin-top: 14px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 12px;
-    }
-
-    .test-send-row {
-      display: flex;
-      gap: 8px;
-      margin-top: 6px;
-    }
-
     /* Activity Feed */
     .activity-section {
       margin-top: 32px;
+      max-width: 1050px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .activity-table-wrapper {
       overflow-x: auto;
-      margin-top: 12px;
+      margin-top: 14px;
     }
 
     .activity-table {
@@ -757,7 +580,7 @@
 
     .activity-table th {
       text-align: left;
-      padding: 10px 14px;
+      padding: 12px 14px;
       color: var(--text-muted);
       border-bottom: 1px solid var(--border-color);
       font-weight: 600;
@@ -881,9 +704,9 @@
     </div>
 
     <!-- Main Workspace -->
-    <div class="workspace-grid">
+    <div class="workspace-layout">
       
-      <!-- Left Column: Admin Message Editor -->
+      <!-- Admin Message Editor -->
       <div class="panel-card">
         <div class="panel-header">
           <div>
@@ -943,6 +766,19 @@
           </button>
         </div>
 
+        <!-- Test Send to actual Telegram -->
+        <div class="test-send-card">
+          <div class="section-label">
+            <span>សាកល្បងផ្ញើសារពិតទៅ Telegram (Test Send):</span>
+          </div>
+          <div class="test-send-row">
+            <input type="text" id="testChatId" class="input-field" placeholder="បញ្ចូល Telegram User ID / Chat ID">
+            <button type="button" class="chip-btn" id="btnTestSend" style="background: #2481cc; color: #fff; border: none; padding: 8px 16px; font-weight: 600;">
+              ផ្ញើតេស្ត
+            </button>
+          </div>
+        </div>
+
         <!-- Bottom Actions -->
         <div class="editor-actions-bar">
           <button type="button" class="btn-primary" id="btnSaveConfig">
@@ -956,65 +792,6 @@
           <button type="button" class="btn-secondary" id="btnResetDefault">
             <span>🔄 ស្តារលំនាំដើម</span>
           </button>
-        </div>
-      </div>
-
-      <!-- Right Column: Smartphone Simulator (Live Preview) -->
-      <div class="simulator-panel">
-        <div class="panel-card" style="padding: 16px;">
-          <div class="panel-header" style="margin-bottom: 14px; padding-bottom: 10px;">
-            <div class="panel-title">📱 Telegram Live Preview</div>
-            <span style="font-size: 0.72rem; color: #34d399; background: rgba(52, 211, 153, 0.1); padding: 3px 8px; border-radius: 6px;">Real-time Render</span>
-          </div>
-
-          <!-- Phone mockup -->
-          <div class="phone-frame">
-            <div class="phone-top-bar">
-              <div class="phone-bot-avatar">🤖</div>
-              <div class="phone-bot-title">
-                <div class="phone-bot-name" id="simBotName">vatanak</div>
-                <div class="phone-bot-sub">bot</div>
-              </div>
-            </div>
-
-            <div class="phone-chat-area">
-              <div class="tg-date-badge">ថ្ងៃនេះ (Today)</div>
-
-              <!-- User sent /start -->
-              <div class="user-bubble">
-                <span>/start</span>
-                <span class="bubble-meta">
-                  12:00 PM
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"/>
-                  </svg>
-                </span>
-              </div>
-
-              <!-- Bot response bubble -->
-              <div class="bot-bubble-wrapper">
-                <div class="bot-bubble" id="simBotBubble">
-                  <!-- Live preview content rendered here -->
-                </div>
-                <div class="sim-buttons-grid" id="simButtonsGrid">
-                  <!-- Live inline buttons rendered here -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Test Send to actual Telegram -->
-          <div class="test-send-card">
-            <div class="section-label">
-              <span>សាកល្បងផ្ញើសារពិតទៅ Telegram (Test Send):</span>
-            </div>
-            <div class="test-send-row">
-              <input type="text" id="testChatId" class="input-field" placeholder="បញ្ចូល Telegram User ID / Chat ID">
-              <button type="button" class="chip-btn" id="btnTestSend" style="background: #2481cc; color: #fff; border: none; padding: 6px 14px; font-weight: 600;">
-                ផ្ញើតេស្ត
-              </button>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -1067,8 +844,6 @@
 
     const textarea = document.getElementById('welcomeTextarea');
     const charCount = document.getElementById('charCount');
-    const simBotBubble = document.getElementById('simBotBubble');
-    const simButtonsGrid = document.getElementById('simButtonsGrid');
     const buttonsListContainer = document.getElementById('buttonsListContainer');
     const toastContainer = document.getElementById('toastContainer');
 
@@ -1097,7 +872,7 @@
       textarea.value = text.substring(0, start) + tag + text.substring(end);
       textarea.selectionStart = textarea.selectionEnd = start + tag.length;
       textarea.focus();
-      updatePreview();
+      updateCharCount();
     }
 
     // Wrap selection with HTML tag
@@ -1111,56 +886,16 @@
       textarea.selectionStart = start + `<${tag}>`.length;
       textarea.selectionEnd = textarea.selectionStart + selected.length;
       textarea.focus();
-      updatePreview();
+      updateCharCount();
     }
 
-    // Update real-time Live Preview
-    function updatePreview() {
+    // Update character count
+    function updateCharCount() {
       const rawText = textarea.value;
       charCount.textContent = `${rawText.length} តួអក្សរ`;
-
-      // Mock User
-      const mockUser = {
-        name: 'សុខ វិបុល',
-        username: '@vibul_sok',
-        id: '182938472',
-        bot_name: 'vatanak20168_bot'
-      };
-
-      // Replace variables
-      let rendered = rawText
-        .replace(/{name}/g, mockUser.name)
-        .replace(/{first_name}/g, mockUser.name)
-        .replace(/{username}/g, mockUser.username)
-        .replace(/{id}/g, mockUser.id)
-        .replace(/{user_id}/g, mockUser.id)
-        .replace(/{bot_name}/g, mockUser.bot_name);
-
-      // Preserve line breaks
-      rendered = rendered.replace(/\n/g, '<br>');
-
-      simBotBubble.innerHTML = rendered || '<i>(សូមវាយសារ welcome នៅខាងឆ្វេង...)</i>';
-
-      // Update simulator buttons
-      renderSimButtons();
     }
 
-    // Render simulator buttons
-    function renderSimButtons() {
-      simButtonsGrid.innerHTML = '';
-      currentConfig.buttons.forEach((btn, idx) => {
-        const simBtn = document.createElement('div');
-        simBtn.className = 'sim-btn';
-        simBtn.textContent = btn.text || `ប៊ូតុង ${idx + 1}`;
-        simBtn.title = `${btn.type}: ${btn.value}`;
-        simBtn.onclick = () => {
-          showToast(`ចុចតេស្តប៊ូតុង: "${btn.text}" (${btn.value})`, 'success');
-        };
-        simButtonsGrid.appendChild(simBtn);
-      });
-    }
-
-    // Render Editable Buttons list in left panel
+    // Render Editable Buttons list
     function renderButtonsEditor() {
       buttonsListContainer.innerHTML = '';
       currentConfig.buttons.forEach((btn, index) => {
@@ -1183,20 +918,16 @@
 
         textInp.oninput = (e) => {
           currentConfig.buttons[index].text = e.target.value;
-          renderSimButtons();
         };
         typeSel.onchange = (e) => {
           currentConfig.buttons[index].type = e.target.value;
-          renderSimButtons();
         };
         valInp.oninput = (e) => {
           currentConfig.buttons[index].value = e.target.value;
-          renderSimButtons();
         };
 
         buttonsListContainer.appendChild(row);
       });
-      renderSimButtons();
     }
 
     function removeButton(index) {
@@ -1227,7 +958,7 @@
         }
 
         renderButtonsEditor();
-        updatePreview();
+        updateCharCount();
       } catch (err) {
         console.error('Failed to load config:', err);
         showToast('មិនអាចទាញយក Config បានទេ!', 'error');
@@ -1270,8 +1001,8 @@
     // Fetch Stats & Activity Logs
     async function fetchStatsAndLogs() {
       try {
-        const [statusRes, logsRes] = await fetch('/api/status').then(r => r.json()),
-              logsData = await fetch('/api/logs').then(r => r.json());
+        const statusRes = await fetch('/api/status').then(r => r.json());
+        const logsData = await fetch('/api/logs').then(r => r.json());
 
         // Update KPIs
         if (statusRes && statusRes.stats) {
@@ -1342,7 +1073,7 @@
         { text: '🌐 បើក Telegram Bot', type: 'url', value: 'https://t.me/vatanak20168_bot' }
       ];
       renderButtonsEditor();
-      updatePreview();
+      updateCharCount();
       showToast('បានជ្រើសរើសគំរូ: លំនាំដើម');
     };
 
@@ -1353,7 +1084,7 @@
         { text: '🛒 មើលទំនិញ / សេវាកម្ម', type: 'url', value: 'https://t.me/vatanak20168_bot' }
       ];
       renderButtonsEditor();
-      updatePreview();
+      updateCharCount();
       showToast('បានជ្រើសរើសគំរូ: ប្រូម៉ូសិនពិសេស');
     };
 
@@ -1364,7 +1095,7 @@
         { text: '❓ សំណួរដែលសួរញឹកញាប់', type: 'callback', value: 'faq' }
       ];
       renderButtonsEditor();
-      updatePreview();
+      updateCharCount();
       showToast('បានជ្រើសរើសគំរូ: សេវាកម្មអតិថិជន');
     };
 
@@ -1374,7 +1105,7 @@
         { text: '📖 ជំនួយ', type: 'callback', value: 'btn_help' }
       ];
       renderButtonsEditor();
-      updatePreview();
+      updateCharCount();
       showToast('បានជ្រើសរើសគំរូ: សាមញ្ញ');
     };
 
@@ -1385,7 +1116,7 @@
     };
 
     // Event listeners
-    textarea.addEventListener('input', updatePreview);
+    textarea.addEventListener('input', updateCharCount);
     document.getElementById('btnSaveConfig').addEventListener('click', saveConfig);
     document.getElementById('btnRefreshLogs').addEventListener('click', () => {
       fetchStatsAndLogs();
